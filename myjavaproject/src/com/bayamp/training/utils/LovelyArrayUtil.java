@@ -1,8 +1,5 @@
 package com.bayamp.training.utils;
 
-
-
-
 public class LovelyArrayUtil {
 	
 	public static String toString(char[] arr) {
