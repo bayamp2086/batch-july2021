@@ -1,6 +1,7 @@
 package com.bayamp.training.array.sandhya.programs;
 
 public class ArrayUtil {
+
 	public static boolean linearSearch(int[] givenArray, int searchNum) {
 		boolean foundNum = false;
 		for (int i = 0; i < givenArray.length; i++) {
