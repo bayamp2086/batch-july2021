@@ -1,4 +1,4 @@
-package com.bayamp.training.array.lovely.program;
+package com.bayamp.training.array.lovely.programs;
 
 import java.time.Duration;
 import java.time.Instant;
