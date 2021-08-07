@@ -1,5 +1,5 @@
-package com.bayamp.training.array.programs;
-import com.bayamp.training.utils.ArrayUtils;
+package com.bayamp.training.array.divya.programs;
+import com.bayamp.training.utils.DivyaArrayUtil;
 import java.util.Scanner;
 
 public class ArrayManipulations 
@@ -25,7 +25,7 @@ public class ArrayManipulations
 		numberToSearch=obj.nextInt();
 		
 		
-		boolean linearSearchResult=ArrayUtils.linearSearch(myArray,numberToSearch);
+		boolean linearSearchResult=DivyaArrayUtil.linearSearch(myArray,numberToSearch);
 		if(linearSearchResult)
 		{
 		System.out.println("Element found");
@@ -35,7 +35,7 @@ public class ArrayManipulations
 			System.out.println("Element not found");
 		}
 		
-		boolean binarySearchResult=ArrayUtils.binarySearch(myArray,numberToSearch);
+		boolean binarySearchResult=DivyaArrayUtil.binarySearch(myArray,numberToSearch);
 		if(binarySearchResult)
 		{
 		System.out.println("Element found");
