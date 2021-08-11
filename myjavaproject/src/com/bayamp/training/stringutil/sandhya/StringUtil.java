@@ -1,4 +1,4 @@
-package com.bayamp.training.strinUtil.sandhya;
+package com.bayamp.training.stringutil.sandhya;
 
 public class StringUtil {
 

@@ -1,6 +1,6 @@
 package com.bayamp.training.exceptions.sandhya.programs;
 
-import com.bayamp.training.strinUtil.sandhya.StringUtil;
+import com.bayamp.training.stringutil.sandhya.StringUtil;
 
 public class CheckedException {
 
