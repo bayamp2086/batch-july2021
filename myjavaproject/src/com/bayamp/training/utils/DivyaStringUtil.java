@@ -161,6 +161,28 @@ public class DivyaStringUtil
 				System.out.println("The given string is not an anagram");
 			}		
 		}
+		public static void strBufferReverse()
+		{
+			StringBuffer myString=new StringBuffer();
+			myString.append("Divya");
+			myString.reverse();
+			System.out.println("The reversed string is " +myString);
+		}
+		
+		public static String reverseWithoutTemp(String myString)
+		{
+			if(myString == null || myString.isEmpty())
+			{
+				return myString;
+			}
+			String reverse="";
+			for(int i=myString.length()-1;i>=0;i--)
+			{
+				reverse=reverse+myString.charAt(i);
+			}
+		return reverse;	
+		}
+		
 	}
 
 

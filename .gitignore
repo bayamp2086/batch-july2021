@@ -3,3 +3,9 @@
 .classpath
 .project
 myjavaproject/.gitignore
+myjavaproject/src/com/bayamp/training/array/divya/programs/StringToInt.java
+myjavaproject/src/com/bayamp/training/divya/generic/programs/BookDataObjectProgram.java
+myjavaproject/src/com/bayamp/training/divya/generic/programs/EmployeeDataObjectProgram.java
+myjavaproject/src/com/bayamp/training/divya/userdefined/objects/Book.java
+myjavaproject/src/com/bayamp/training/utils/DivyaRandomUtils.java
+myjavaproject/src/com/bayamp/training/string/divya/programs/StrReverse.java
