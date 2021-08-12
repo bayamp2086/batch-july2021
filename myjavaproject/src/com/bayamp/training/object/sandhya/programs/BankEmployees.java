@@ -1,5 +1,7 @@
 package com.bayamp.training.object.sandhya.programs;
 
+import java.util.Objects;
+
 public class BankEmployees {
 	public String empFirstName;
 	public String empLastName;
@@ -29,13 +31,28 @@ public class BankEmployees {
 		return empLastName;
 	}
 
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		BankEmployees other = (BankEmployees) obj;
+		return Objects.equals(empFirstName, other.empFirstName) && Objects.equals(empLastName, other.empLastName)
+				&& Double.doubleToLongBits(salary) == Double.doubleToLongBits(other.salary)
+				&& workYears == other.workYears;
+	}
+
 	public int getWorkYears() {
 		return workYears;
 	}
 
 	@Override
 	public String toString() {
-		return "BankEmployees []";
+		return "BankEmployees [firstName=\" + empFirstName + \", LastName=\" + empLastName + \", numberOfYearsWorked =\" + workYears + \", Salary=\" + salary\n"
+				+ "]";
 	}
 
 }
