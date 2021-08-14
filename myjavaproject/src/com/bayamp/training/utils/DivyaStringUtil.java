@@ -3,7 +3,12 @@ package com.bayamp.training.utils;
 public class DivyaStringUtil
 
 {
-	public static void reverseString(String myString) {
+	public static void reverseString(String myString) throws Exception 
+	{
+		if (myString==null)
+		{
+			throw new Exception("The input String cannot be null");
+		}
 		int start = 0;
 		int end = (myString.length()) - 1;
 		char[] tc = myString.toCharArray();
@@ -162,6 +167,39 @@ public class DivyaStringUtil
 		{
 			throw new Exception("The input string cannot be null");
 		}
+	}
+	
+	public static String strRe(String myString)
+	{
+		char[] ch=myString.toCharArray();
+		int start=0;
+		int end=myString.length()-1;
+		char temp;
+		while(start<=end)
+		{
+			if(ch[start]!=' ' && ch[end]!=' ')
+			{
+			temp=ch[start];
+			ch[start]=ch[end];
+			ch[end]=temp;
+			start++;
+			end--;
+			}
+			else 
+			{
+			if(ch[start]==' ')
+			{
+				start++;
+			}
+			if(ch[end]==' ')
+			{
+				end--;
+			}
+			}
+		}
+		myString=String.valueOf(ch);
+		return myString;
+		
 	}
 
 }

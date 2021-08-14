@@ -1,41 +1,33 @@
 package com.bayamp.training.divya.userdefined.objects;
 
-public class Employee 
+public class Employee extends Person
 {
 	private int empId;
-	private String empName;
 	private double empSalary;
-	private String empDepartment;
-	public Employee(int empId,String empName,double empSalary,String empDepartment)
+	
+	public Employee(String fname,String lname,int empId,double empSalary)
 	{
+		
+		super(fname,lname);
 		this.empId=empId;
-		this.empName=empName;
-		this.empSalary=empSalary;
-		this.empDepartment=empDepartment;
+		this.empSalary=empSalary;	
 	}
+	
 	public int getEmpId()
 	{
 		return empId;
 	}
-	public String getEmpName()
-	{
-		return empName;
-	}
+	
 	public double getEmpSalary()
 	{
 		return empSalary;
 	}
-	public String getEmpDepartment()
+	@Override
+	public String toString() 
 	{
-		return empDepartment;
+		return " [empId=" + empId + ", empSalary=" + empSalary + "]" +super.toString();
 	}
-	public void setEmpSalary(double empSalary)
-	{
-		this.empSalary=empSalary;
-	}
-	public void setEmpDepartment(String empDepartment)
-	{
-		this.empDepartment=empDepartment;
-	}
-
+	/*
+	 * public void print() { System.out.println("Employee class"); }
+	 */
 }
