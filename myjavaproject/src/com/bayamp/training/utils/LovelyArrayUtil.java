@@ -215,4 +215,21 @@ public class LovelyArrayUtil {
 
 	}
 
+	
+	public static void breakContinueForLoop(int[] arr, int breakcount,int continueCount)
+	{
+		for (int i = 0; i < arr.length; i++) {
+			
+			if(i==breakcount)
+			{
+				System.out.println("current loop is breaking at index " + i);
+				break;
+			}
+			if(i==continueCount)
+				continue;
+			System.out.println(arr[i]);
+			
+		}
+	}
+	
 }

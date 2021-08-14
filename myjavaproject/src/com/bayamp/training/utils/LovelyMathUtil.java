@@ -84,5 +84,10 @@ public class LovelyMathUtil {
 		}
 		return temp;
 	}
+	
+	public static int getRandomNumber() {
+		//random
+		return 0;
+	}
 
 }
