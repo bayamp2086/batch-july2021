@@ -11,6 +11,7 @@ public class Employee extends Person {
 	boolean isNightShift;
 	String address;
 	
+	// in case this default constructor is needed, it needs a default super constructor too
 	public Employee() {
 		super();
 	}
@@ -18,11 +19,11 @@ public class Employee extends Person {
 	public Employee(String firstName, String lastName,int empId,String ssn) {
 		super(firstName, lastName);
 		this.empId = empId;
-		this.ssn = ssn;
-		// TODO Auto-generated constructor stub
+		this.ssn = ssn;		
 	}
 	
 		
+	
 	public String getDepartment() {
 		return department;
 	}
@@ -46,6 +47,10 @@ public class Employee extends Person {
 	public void setDesignation(String designation) {
 		this.designation = designation;
 	}
+	
+	public void setDepartment(String department) {
+		this.department = department;
+	}
 	public void setSalary(long salary) {
 		this.salary = salary;
 	}
@@ -58,6 +63,42 @@ public class Employee extends Person {
 	
 	public void setAddress(String address) {
 		this.address = address;
+	}
+	
+	@Override
+	public String toString() {
+		return "Employee [ "+ super.toString() +" department=" + department + ", empId=" + empId + ", salary=" + salary + "]";
+	}
+
+	@Override
+	public boolean equals(Object obj)
+	{
+		if (this==obj) {
+			return true;
+		}
+		
+		if (obj == null)
+			return false;
+		
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		
+		Employee emp = (Employee) obj;
+		if (!this.firstName.equals(emp.firstName)) {
+			return false;
+		}
+		if (!this.lastName.equals(emp.lastName)) {
+			return false;
+		}
+		if (this.empId != emp.empId) {
+			return false;
+		}
+		if (!this.department.equals(emp.department)) {
+			return false;
+		}
+		
+		return true;
 	}
 	
 }
