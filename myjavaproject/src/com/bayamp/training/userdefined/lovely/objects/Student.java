@@ -1,15 +1,18 @@
 package com.bayamp.training.userdefined.lovely.objects;
 
-public class Student extends Person {
+public class Student extends Person implements PersonI {
 
 	
 	public double gpa;
 	private String id;
+	static int count;
+	
 	
 	public Student(String firstName, String lastName, double gpa, String id) {
 		super(firstName,lastName);		
 		this.gpa = gpa;
 		this.id = id;
+		count++;
 	}
 
 	public double getGpa() {
@@ -66,5 +69,16 @@ public class Student extends Person {
 	// this is equals method overloading, as signature is different.
 	public boolean equals(Student student) {
 		return true;
+	}
+
+	@Override
+	public String getIdentification() {		
+		return this.id + this.firstName + this.lastName;
+	}
+
+	
+	public static int getCount() {
+		// TODO Auto-generated method stub
+		return count;
 	}
 }

@@ -1,6 +1,6 @@
 package com.bayamp.training.userdefined.lovely.objects;
 
-public class Employee extends Person {
+public class Employee extends Person implements PersonI  {
 	
 	
 	String department;
@@ -10,6 +10,8 @@ public class Employee extends Person {
 	long salary;
 	boolean isNightShift;
 	String address;
+	static int count;
+	
 	
 	// in case this default constructor is needed, it needs a default super constructor too
 	public Employee() {
@@ -19,7 +21,8 @@ public class Employee extends Person {
 	public Employee(String firstName, String lastName,int empId,String ssn) {
 		super(firstName, lastName);
 		this.empId = empId;
-		this.ssn = ssn;		
+		this.ssn = ssn;
+		count++;
 	}
 	
 		
@@ -99,6 +102,20 @@ public class Employee extends Person {
 		}
 		
 		return true;
+	}
+
+	
+
+	
+	
+	@Override
+	public String getIdentification() {
+		
+		return this.empId + this.firstName + this.lastName;
+	}
+	
+	public static int getCount() {
+		return count;
 	}
 	
 }
