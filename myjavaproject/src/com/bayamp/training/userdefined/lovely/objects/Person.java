@@ -11,6 +11,7 @@ abstract public class Person {
 		this.lastName = lastName;
 	}
 	
+	//since a parametrized constructor is created, a default constructed needs to be added, if required.
 	public Person()
 	{
 		
@@ -33,13 +34,6 @@ abstract public class Person {
 		return "firstName=" + firstName + ", lastName=" + lastName;
 	}
 
-
-
-	@Override
-	public boolean equals(Object obj) {
-		// TODO Auto-generated method stub
-		return super.equals(obj);
-	}
 
 	
 	
