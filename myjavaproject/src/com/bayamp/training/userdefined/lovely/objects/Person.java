@@ -1,7 +1,7 @@
 package com.bayamp.training.userdefined.lovely.objects;
 
 //abstract class cannot be instantiated
-abstract public class Person {
+abstract public class Person implements PersonI{
 	protected String firstName;
 	protected String lastName;
 	protected static int count;
@@ -21,15 +21,6 @@ abstract public class Person {
 
 	
 	
-// getters for first and last name should be in the respective class and not person
-	public String getFirstName() {
-		return firstName;
-	}
-
-	
-	public String getLastName() {
-		return lastName;
-	}
 
 	@Override
 	public String toString() {
@@ -42,10 +33,30 @@ abstract public class Person {
 	}
 
 	public static  int getCount() {
-	
-			
-			return count;
 		
+			return count;		
+	}
+	
+// interface methods implemented
+	public String getFirstName() {
+		return firstName;
+	}
+
+	
+	public String getLastName() {
+		return lastName;
+	}
+
+	
+	public String getValue() {
+		if (this instanceof Employee) {
+			return "The department is " +((Employee)this).getDepartment();
+		}
+		else if (this instanceof Student)
+		{
+			return "The student gpa is " + String.valueOf(((Student)this).getGpa());
+		}
+		return "";		
 	}
 	
 	

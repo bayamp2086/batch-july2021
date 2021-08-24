@@ -81,4 +81,10 @@ public class Student extends Person implements PersonI {
 		// TODO Auto-generated method stub
 		return count;
 	}
+
+	@Override
+	public int getWorkingHours() {
+		// daily college hours + lab hours + tutions 
+		return 0;
+	}
 }
