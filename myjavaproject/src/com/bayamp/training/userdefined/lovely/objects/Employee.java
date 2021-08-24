@@ -1,6 +1,10 @@
 package com.bayamp.training.userdefined.lovely.objects;
 
-public class Employee extends Person implements PersonI  {
+import java.util.Comparator;
+
+
+
+public class Employee  extends Person  {
 	
 	
 	String department;
@@ -14,7 +18,8 @@ public class Employee extends Person implements PersonI  {
 	
 	
 	// in case this default constructor is needed, it needs a default super constructor too
-	public Employee() {
+	//never let default constructor public
+	private Employee() {
 		super();
 	}
 	
@@ -117,5 +122,33 @@ public class Employee extends Person implements PersonI  {
 	public static int getCount() {
 		return count;
 	}
-	
+
+	@Override
+	public int getWorkingHours() {
+		// daily hours + overtime
+		return 0;
+	}
+
+//	@Override
+//	//this is used for sorting elements
+//	public int compare(Employee e1, Employee e2) {
+//		return e1.firstName.compareTo(e2.firstName);
+//	}
+//	
+	//sort using compareto method on employee first name
+	public static void sort(Employee[] emps)
+	{
+		Employee temp;
+		for (int i = 0; i < emps.length; i++) {
+            for (int j = i + 1; j < emps.length; j++) {
+            	// to compare one string with other strings
+                if (emps[i].firstName.compareTo(emps[j].firstName) > 0) {
+                    // swapping
+                    temp = emps[i];
+                    emps[i] = emps[j];
+                    emps[j] = temp;
+                }
+            }
+		}
+	}
 }
